@@ -6,16 +6,8 @@ from django.shortcuts import render
 from pages.kayak import *
 
 def home(request):
-    ockayak = Kayak()
-    ockayak.brand = "Ocean Kayak"
-    ockayak.material = "Single Layer Polyethylene"
-    ockayak.length = "12 ft."
-
-    malibu = PaddleKayak()
-    malibu.model = "Malibu"
-    malibu.capacity = 1
-    malibu.style = "Sit-on-Top"
-    malibu.activity = "Recreation"
+    ockayak = Kayak("Ocean Kayak", "Single Layer Polyethylene", "12 ft.")
+    malibu = PaddleKayak("Malibu", 1, "Sit-on-Top", "Recreation")
 
     context = {
         "debug": settings.DEBUG,

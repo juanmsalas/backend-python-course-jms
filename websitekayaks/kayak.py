@@ -1,9 +1,8 @@
 class Kayak:
-    brand = ""
-    material = ""
-    length = ""
-    def __init__(self):
-        print("Inicialización de la súper clase")
+    def __init__(self, brand, material, length):
+        self.brand = brand
+        self.material = material
+        self.length = length
     def styles(self):
         print("Kayak class styles method")
     def activities(self):
@@ -14,12 +13,11 @@ class Kayak:
         print("Kayak class features method")
 
 class PaddleKayak(Kayak):
-    model = ""
-    capacity = ""
-    style = ""
-    activity = ""
-    def __init__(self):
-        print("Inicialización de la sub clase")
+    def __init__(self, model, capacity, style, activity):
+        self.model = model
+        self.capacity = capacity
+        self.style = style
+        self.activity = activity
     def available_colors(self):
         print("PaddleKayak subclass available_colors method")
         
